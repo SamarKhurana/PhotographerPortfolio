@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio for photographer by DazzleZeal">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Portfolio,Photographer portfolio,DazzleZeal">
+    <meta name="author" content="DazzleZeal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Photographer portfolio</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" media="(max-width:710px)" href="css/media.css" />
+    <link rel="stylesheet" media="(max-width:480px)" href="css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.css" />
+
+</head>
+<body>
+    <!--Go to up icon-->
+    <div class="go-to-up" onclick="topFunction();"><i class="fas fa-chevron-up"></i></div>
+
+    <!--for change background image go to main.css .header class-->
+    <!--Tip for looking professional: 
+        choose color of background image that can match with website color,
+        if you change the color of webcolor or webhover variable in :root element
+        in main.css all website colors will automatically changed-->
+    <header class="header">
+
+        <!--nav open icon for  small devices-->
+        <div class="nav-open" id="navOpen">
+            <i class="fas fa-bars" onclick="navOpen()"></i>
+        </div>
+
+        <!--navigation bar-->
+        <nav class="navbar" id="nav">
+
+            <!--nav close icon for  small devices-->
+            <div class="nav-close" id="navClose">
+                <i class="fas fa-times" onclick="navClose()"></i>
+            </div>
+
+            <!--navbar dp-->
+            <div class="dp-container">
+                <!--change image here-->
+                <img src="images/dp.jpg" alt="Photo by nappy from Pexels" />
+                <h1 class="dp-name">Jeremy Either</h1>
+            </div>
+
+            <!--social icons-->
+            <div class="social-icons-container">
+                <ul>
+                    <!--add your social media links here-->
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+
+            <ul class="navlinks">
+                <!--Nav-bar Links-->
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!--Signature Content-->
+        <div class="signature">
+
+
+            <h1>Jeremy <span class="name">Either</span></h1>
+            <h5>Designer/Photographer</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                In, provident rem alias ut similique impedit voluptatem
+                vel magnam et ad aliquid saepe expedita voluptatibus deleniti,
+                omnis sed animi?</p>
+            <div class="hire-me">
+                <a href="#">Hire Me</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </header>
+
+    <!--About me-->
+    <div class="about-container">
+        <h1 id="about"><span>About</span> Me</h1>
+        <hr />
+        <div class="Asection1">
+            <!--About section bio change here-->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit recusandae
+                optio repellendus neque labore voluptatum dolores tempore unde eaque iste,
+                doloremque reprehenderit expedita! Itaque facilis deserunt maxime est
+                numquam molestiae ullam porro veritatis cupiditate quod, sit id eos vel
+                nemo necessitatibus laboriosam tempora.
+                Explicabo ipsum esse corporis ullam excepturi voluptates?</p>
+        </div>
+        <div class="section-divider">
+            <div class="Asection2">
+                <ul>
+                    <!--your name or other data in about section-->
+                    <li>Name: <span>Jeremy Either</span></li>
+                    <li>Age: <span>30</span></li>
+                    <li>Qualification: <span>Graduation</span></li>
+                    <li>Post: <span>Editor</span></li>
+                    <li>Language: <span>English</span></li>
+                </ul>
+            </div>
+            <div class="Asection3">
+                <!--your experience-->
+                <div class="box"><span>2+</span>
+                    <h3>Years Of Experience</h3>
+                </div>
+                <div class="box"><span>80+</span>
+                    <h3>Projects Completed</h3>
+                </div>
+                <div class="clear">
+                    <div class="box"><span>120+</span>
+                        <h3>Customers</h3>
+                    </div>
+                    <div class="box"><span>10+</span>
+                        <h3>Award won</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--Work-->
+    <!--set backgound color of work section-->
+    <div style="background-color: rgb(0,0,0); clear: both;">
+        <div class="work-container">
+            <h1 id="work">My <span>Work</span></h1>
+            <hr />
+            <div class="section-divider">
+                <div class="wsection1">
+                    <!--change imagee here-->
+                    <img src="images/bird.jpg" alt="image from pixel" />
+                </div>
+                <div class="wsection2">
+                    <h2>Nature</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt expedita nam, tenetur, voluptatem quam nulla fugiat
+                        est saepe omnis consequatur accusantium amet, laboriosam
+                        quidem! Pariatur officiis vel doloremque provident eum sint
+                        nihil, ut quis explicabo harum esse nisi, adipisci animi
+                        dolorem velit quaerat veritatis delectus totam facere
+                        repellendus ipsam! Necessitatibus?</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <br /> <br /> <br /> <br />
+            <!--2nd image-->
+            <div class="section-divider">
+                <div class="wsection3">
+                    <h2>Object</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt expedita nam, tenetur, voluptatem quam nulla fugiat
+                        est saepe omnis consequatur accusantium amet, laboriosam
+                        quidem! Pariatur officiis vel doloremque provident eum sint
+                        nihil, ut quis explicabo harum esse nisi, adipisci animi
+                        dolorem velit quaerat veritatis delectus totam facere
+                        repellendus ipsam! Necessitatibus?</p>
+                </div>
+                <div class="wsection4">
+                    <!--change image here-->
+                    <img src="images/object.jpg" alt="image from pixel" />
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <!--3rd image-->
+            <br /> <br /> <br /> <br />
+            <div class="section-divider">
+                <div class="wsection1">
+                    <!--change image here-->
+                    <img src="images/man.jpg" alt="image from pixel" />
+                </div>
+                <div class="wsection2">
+                    <h2>People</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt expedita nam, tenetur, voluptatem quam nulla fugiat
+                        est saepe omnis consequatur accusantium amet, laboriosam
+                        quidem! Pariatur officiis vel doloremque provident eum sint
+                        nihil, ut quis explicabo harum esse nisi, adipisci animi
+                        dolorem velit quaerat veritatis delectus totam facere
+                        repellendus ipsam! Necessitatibus?</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <br /> <br /> <br /> <br />
+            <!--4rth image-->
+            <div class="section-divider">
+                <div class="wsection3">
+                    <h2>Unknown</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sunt expedita nam, tenetur, voluptatem quam nulla fugiat
+                        est saepe omnis consequatur accusantium amet, laboriosam
+                        quidem! Pariatur officiis vel doloremque provident eum sint
+                        nihil, ut quis explicabo harum esse nisi, adipisci animi
+                        dolorem velit quaerat veritatis delectus totam facere
+                        repellendus ipsam! Necessitatibus?</p>
+                </div>
+                <div class="wsection4">
+                    <!--change imagee here-->
+                    <img src="images/unknown.jpg" alt="image from pixel" />
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--for layout-->
+        <div class="clear"></div>
+    </div>
+
+    <!--gallery-->
+    <section class="gallery-section">
+        <br />
+        <div class="gallery-container">
+
+            <h1 id="gallery">Gallery</h1>
+            <hr />
+            <br />
+        </div>
+        <!--Slides-->
+        <section id="slider">
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
+
+            <label for="s1" id="slide1">
+                <!--change gallery images here-->
+                <img src="images/s1.jpeg" alt="Photo from Pexels" />
+            </label>
+            <label for="s2" id="slide2">
+                <img src="images/s2.jpeg" alt="Photo from Pexels" />
+            </label>
+            <label for="s3" id="slide3">
+                <img src="images/s3.jpeg" alt="Photo from Pexels" />
+            </label>
+            <label for="s4" id="slide4">
+                <img src="images/s4.jpeg" alt="Photo from Pexels" />
+            </label>
+            <label for="s5" id="slide5">
+                <img src="images/s5.jpg" alt="Photo from Pexels" />
+            </label>
+        </section>
+
+        <br /><br />
+
+        <div class="clear"></div>
+    </section>
+
+    <!--Contact section-->
+    <footer class="footer">\
+        <br />
+        <div class="contact-container">
+            <h1 id="contact">GET IN <span>TOUCH</span></h1>
+            <hr />
+            <div class="section-divider">
+                <div class="Csection1">
+                    <br />
+                    <h2>DON'T BE SHY !</h2>
+                    <br />
+                    <p>Feel free to get in touch with me. I am always open
+                        to discussing new projects, creative ideas or
+                        opportunities to be part of your visions.</p>
+
+                    <br />
+                    <!--mail icon-->
+                    <!--give your mail by changing #-->
+                    <a href="mailto:#"><span><i class="fas fa-envelope"></i></span></a>
+                    <a href="mailto:#"><span class="mail-heading">Mail Me</span></a>
+                    <br />
+                    <!--change mail here-->
+                    <span class="mail">Jeremy@mail.com</span>
+
+                </div>
+                <div class="Csection2">
+                    <!--form-->
+                    <form method="post" action="#">
+                        <input type="text" id="fname" name="fname" placeholder="Your Full Name" required />
+                        <input type="email" id="email" name="email" placeholder="Your Email" required />
+                        <input type="text" id="subject" name="subject" placeholder="Your Subject" required />
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="copyright">&#169; 2021 DazzleZeal | All right reserved</div>
+        </div>
+    </footer>
+    <script src="js/custom.js"></script>
+</body>
+</html>

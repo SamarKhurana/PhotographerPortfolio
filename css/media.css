@@ -1,0 +1,129 @@
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+body,html{
+    overflow-x: hidden !important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/*header section*/
+/*navbar*/
+.header .navbar{
+    width: 50%;
+    right: -50%;
+    transition: right 350ms linear;
+   
+}
+
+/*nav open icon*/
+.header .nav-open{
+    display: inline-block;
+}
+
+/*nav close icon*/
+.nav-close{
+    display: inline-block;
+}
+
+/*Header Signature  style*/
+.header .signature{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    line-height: 40px; 
+}
+
+/*about section*/
+.about-container .section-divider .Asection2{
+    float: none;
+    width: 100%; 
+}
+
+.about-container .section-divider .Asection3{
+   float: none;
+   width: 100%;  
+}
+
+.about-container .section-divider .Asection3 .box{
+    float: left;
+}
+
+/*Work section*/
+.work-container .section-divider .wsection1{
+    box-sizing: border-box;
+    float: none;
+    width: 100%;
+}
+
+.work-container .section-divider .wsection2{
+    box-sizing: border-box;
+    float: none;
+    width: 100%;  
+}
+
+.work-container .section-divider h2{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.work-container .section-divider .wsection1 img{
+    width:100%;
+    height:auto;
+}
+
+.work-container .section-divider .wsection3{
+    float: none;
+    width: 100%; 
+}
+
+.work-container .section-divider .wsection4{
+    float: none;
+    width: 100%;
+}
+
+.work-container .section-divider .wsection4 img{
+    width:100%;
+    height:auto;
+    float: none;
+    margin-top: 10px;
+}
+
+/*Gallery section*/
+.gallery-section .gallery-container{
+    width: 100%;
+}
+
+.gallery-section .gallery-container hr{
+    width: 90%;
+}
+
+/*Gallery*/
+#slider {
+    position: relative;
+    width: 78%;
+    height: 50vw;
+    margin: 80px auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+}
+
+/*contact section*/
+.footer .contact-container .section-divider .Csection1{
+   
+    float: none;
+    width: 100%;
+}
+
+.footer .contact-container .section-divider .Csection2{
+    margin-top: 10px;
+    float: none;
+    width: 100%;
+}

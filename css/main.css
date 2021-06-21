@@ -1,0 +1,816 @@
+/*variable for store color */
+:root{
+    --webcolor: #d66a27;
+    --webhover: #ff680a;
+}
+*{ 
+    margin: 0px; 
+    padding: 0px; 
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*for smooth scrolling*/
+html {
+    scroll-behavior: smooth;
+    margin: 0px; 
+    padding: 0px; 
+}
+
+/*import font*/
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular-webfont.eot),
+         url(../fonts/OpenSans-Regular-webfont.woff);
+}
+
+body,html{
+    background-color: rgb(245, 245, 245);
+    font-family: OpenSans, sans-serif;
+    overflow-x: hidden !important;
+}
+
+/*scroll bar style*/
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--webcolor); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--webhover); 
+}
+
+::-moz-selection { 
+    color: rgb(255, 255, 255);
+    background-color: var(--webcolor);
+}
+
+::selection { 
+    color: rgb(255, 255, 255);
+    background-color: var(--webcolor);
+}
+
+/*go to up icon style*/
+.go-to-up{
+    width: 40px;
+    height: 40px;
+    background-color: var(--webcolor);
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    right: 2%;
+    bottom: 100%;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.go-to-up i{
+   color: rgb(255, 255, 255);
+   font-size: 2rem;
+   line-height: 38px;
+}
+
+.go-to-up.active{
+    visibility: visible;
+    opacity: 1;
+    bottom: 3%;
+}
+
+.go-to-up:hover{
+    background-color: var(--webhover);
+}
+
+/*Header Style*/
+.header{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    /*change background image here*/
+    background-image: url('../images/headerbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+
+/*nav open icon for small screens*/
+.nav-open{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0%;
+    padding: 10px;
+    display: none;
+}
+.nav-open i{
+    color: var(--webcolor);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+/*nav close icon for small screens*/
+.nav-close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    padding: 10px;
+    z-index: 2;
+    display: none;
+}
+
+.nav-close i{
+    color: rgb(200, 200, 200); 
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.nav-close i:hover{
+    color: rgb(255, 255, 255); 
+}
+
+/*nav-bar container*/
+.header .navbar{
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    right: 0%;
+    top :0%;
+    z-index: 1;
+}
+
+/*navbar Dp image container*/
+.navbar .dp-container{
+    box-sizing: border-box;
+    width:100%;
+    text-align: center;
+}
+
+/*dp image*/
+.navbar .dp-container img{
+    display: block;
+    margin: 5% auto;
+    box-sizing: border-box;
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px;
+    box-shadow: 2px 2px 3px rgb(0, 0, 0), -1px -1px 3px rgb(255, 255, 255);
+} 
+
+/*dp-name*/
+.dp-name{
+    font-size: 1.6em;
+    color: rgb(255, 255, 255);
+}
+
+/*social-icons-container*/
+.social-icons-container{
+    width: 100%;
+    margin-top: 30px;
+    
+    
+    
+}
+
+.header .navbar .social-icons-container ul{
+    width:100%;
+    list-style-type: none;
+    text-align: center;
+    height:40px;
+}
+
+.header .navbar .social-icons-container ul li{
+
+    display: inline-block;
+    position: relative;
+}
+
+.header .navbar .social-icons-container ul li a{
+    display: inline-block; 
+    padding: 5px 8px;
+    text-decoration: none;  
+     
+}
+
+/*  for border effect on social icons */
+.header .navbar .social-icons-container ul li a:after{
+content:"";
+position: absolute;
+top: 100%;
+left: 50%;
+width:0%;
+height: 2px;
+background-color: rgb(255, 255, 255);
+transition: all 500ms;
+border-radius: 1px;
+
+}
+.header .navbar .social-icons-container ul li a i{
+    color: rgb(200, 200, 200);
+    font-size: 1.2em;
+}
+
+
+.header .navbar .social-icons-container ul li:hover i{
+    color: rgb(255, 255, 255);
+}
+
+.header .navbar .social-icons-container ul li:hover a:after{
+    width:100%;
+    left: 0%;
+}
+
+/*Navbar buttons*/
+.header .navbar .navlinks{
+    list-style-type: none;
+    margin: 30px auto;
+    width: 100px;
+    text-align: center;
+}
+
+.header .navbar .navlinks li {
+    margin-bottom: 20px;    
+}
+
+.header .navbar .navlinks li a{
+    color: rgb(200, 200, 200);
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgb(0, 0, 0), -1px -1px 2px rgb(200, 200, 200);
+}
+
+/*on hover* navbar buttons*/
+.header .navbar .navlinks li a:hover{
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px rgb(255, 255, 255), -2px -2px 3px rgb(0, 0, 0);
+}
+
+/*Header Signature  style*/
+.header .signature{
+    width: 35%;
+    height: 50%;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+   
+}
+
+.header .signature h1{
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+   
+}
+
+.header .signature h1 span.name{
+
+    font-size: 2rem;
+    color: var(--webcolor);
+}
+
+.header .signature h5{
+    background-color: var(--webcolor);
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0px 5px;
+    margin-top: 15px;
+    
+}
+
+.header .signature p{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: justify;
+    line-height: 35px;
+    margin-top: 15px;
+}
+
+.header .signature .hire-me{
+    margin-top: 15px;
+}
+
+.header .signature .hire-me a{
+    color: var(--webcolor);
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid var(--webcolor);
+    padding: 5px 12px;
+    text-align: center;
+    transition: background-color 500ms, color 500ms;
+    font-weight: 900;
+}
+
+.header .signature div a:hover{
+    color: rgb(255, 255, 255);
+    background-color: var(--webcolor);
+}
+
+/*About section style*/
+.about-container{
+    width: 100%;
+    color: rgb(0, 0, 0);
+    clear: both;
+}
+
+.about-container h1:first-child{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 10px;
+   
+    
+
+}
+
+.about-container h1:first-child span{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.about-container hr{
+    border: 1px solid rgba(0,0,0,0.8);
+    border-radius: 2px;
+    margin: 0px auto;
+    width: 90%;
+}
+
+/*about bio*/
+.about-container .Asection1{
+    width:90%;
+    margin: 0px auto;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+
+
+.about-container .section-divider{
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    
+}
+
+.about-container .section-divider .Asection2{
+    box-sizing: border-box;
+    float: left;
+    width: 40%;
+    padding-top: 20px;
+}
+.about-container .section-divider .Asection3{
+    box-sizing: border-box;
+    float: left;
+    width: 60%;
+    padding-top: 20px;
+
+}
+
+.about-container .section-divider .Asection2 ul{
+    list-style-type: none;
+    line-height: 50px;
+
+}
+
+.about-container .section-divider .Asection2 ul li {
+    font-size: 1.5rem;
+}
+
+.about-container .section-divider .Asection2 ul li span{
+    font-size: 1.5rem;
+    color: var(--webcolor);
+}
+
+
+.about-container .section-divider .Asection3 .box{
+    float: right;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
+    margin: 2px;
+}
+
+.about-container .section-divider .Asection3 .box span{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.about-container .section-divider .Asection3 .box h3{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+}
+
+
+/* work section style*/
+.work-container{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px auto;
+    color: rgb(255, 255, 255);
+}
+
+.work-container h1:first-child{
+
+    padding-top: 20px;
+    font-size: 2rem;   
+    text-align: center;
+}
+
+.work-container h1:first-child span{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.work-container hr{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1px;
+    margin: 20px  auto;
+}
+
+.work-container .section-divider{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    text-align: justify;
+    
+}
+
+
+.work-container .section-divider .wsection1{
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+   
+}
+
+.work-container .section-divider .wsection2{
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    
+}
+
+.work-container .section-divider h2{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.work-container .section-divider .wsection1 img{
+    width:90%;
+    height:auto;
+}
+
+/*2nd img*/
+
+.work-container .section-divider .wsection3{
+    float: left;
+    width: 50%;
+   
+}
+
+.work-container .section-divider .wsection4{
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+}
+
+.work-container .section-divider .wsection4 img{
+    width:90%;
+    height:auto;
+    float: right;
+}
+
+.clear{
+    clear:both
+}
+
+/*Galllery section style*/
+.gallery-section{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.gallery-section .gallery-container{
+    width: 90%;
+    margin: 0px auto 0px auto;
+    text-align: center;
+}
+
+.gallery-section .gallery-container h1:first-child{
+    font-size: 2em;
+    color: rgb(0,0,0);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.gallery-section .gallery-container hr{
+    border: 1px solid var(--webcolor);
+    border-radius: 2px;
+    margin: 0px auto;
+}
+
+/*gallery slides style*/
+  
+  #slider {
+    position: relative;
+    width: 50%;
+    height: 32vw;
+    margin: 80px auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+}
+  
+  input[type=radio] {
+    position: relative;
+    top: 115%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+    cursor: pointer;
+    /*change radio button color*/
+    filter: saturate(0%);
+}
+  
+  
+  input[type=radio]:nth-child(5) {
+    margin-right: 0px;
+}
+  
+  input[type=radio]:checked {
+    opacity: 1;
+}
+  
+  #slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 400ms ease;
+    overflow: hidden;
+}
+
+  #slider label img{
+      display: block;
+      margin: 5px auto;
+      width: 95%;
+}
+  
+  #slide1 {
+    background: var(--webcolor);
+}
+  
+  #slide2 {
+    background: rgb(0, 0, 0);
+}
+  
+  #slide3 {
+    background: var(--webcolor);
+}
+  
+  #slide4 {
+    background: rgb(0, 0, 0);
+}
+  
+  #slide5 {
+    background: var(--webcolor);
+}
+  
+  
+  /* Slider Functionality */
+  
+  /* Active Slide */
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5 {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+}
+  
+  /* Next Slide */
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+}
+  
+  
+  /* Next to Next Slide */
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide1, #s5:checked ~ #slide2 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(30%, 0, -250px);
+}
+  
+  /* Previous to Previous Slide */
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-30%, 0, -250px);
+}
+  
+/* Previous Slide */
+#s1:checked ~ #slide5, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-15%, 0, -100px);
+}
+  
+  #s1:checked ~ #slide5 {
+      background-color: rgb(0, 0, 0);
+}
+
+  #s1:checked ~ #slide4 {
+    background-color: var(--webcolor);
+}
+
+#s5:checked ~ #slide1{
+      background-color: rgb(0, 0, 0);
+}
+
+#s5:checked ~ #slide2{
+    background-color: var(--webcolor);
+}
+
+#s2:checked ~ #slide5, #s4:checked ~ #slide1{
+    background-color: rgb(0, 0, 0);
+}
+
+/*Footer or contact*/
+.footer{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer .contact-container{
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0px auto 0px auto;
+}
+
+.footer .contact-container h1:first-child{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.footer .contact-container h1:first-child span{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.footer .contact-container hr{
+    border: 1px solid  rgb(255, 255, 255);
+    margin: 10px auto 0px auto;
+}
+
+.footer .contact-container .section-divider{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.footer .contact-container .section-divider .Csection1{
+    box-sizing: border-box;
+    float: left;
+    width: 30%;
+}
+
+.footer .contact-container .section-divider .Csection2{
+    box-sizing: border-box;
+    float: left;
+    width: 70%;
+    padding: 10px;
+}
+
+.footer .contact-container .section-divider .Csection1 h2{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;  
+}
+
+.footer .contact-container .section-divider .Csection1 p{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+.footer .contact-container .section-divider .Csection1 a{
+    text-decoration: none;
+}
+
+.footer .contact-container .section-divider  .Csection1 a span i{
+    color: var(--webcolor);
+    font-size: 2rem;
+}
+
+.footer .contact-container .section-divider .Csection1 a .mail-heading{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+
+.footer .contact-container .section-divider .Csection1 .mail{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+.footer .contact-container .section-divider .Csection2 form input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: rgb(40, 40, 40);;
+    color: rgb(255, 255, 255);
+}
+
+.footer .contact-container .section-divider .Csection2 form #message{
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: none;
+  outline: none;
+  border-radius: 20px;
+  margin: 8px 0px;
+  background-color: rgb(40, 40, 40);
+  color: rgb(255, 255, 255);
+}
+
+.footer .contact-container .section-divider .Csection2 form input:focus{
+    outline: none;
+    border: 1px solid var(--webcolor);
+    border-radius: 20px;
+    transition: border 200ms;
+}
+
+.footer .contact-container .section-divider .Csection2 form #message:focus{
+    outline: none;
+    border: 1px solid var(--webcolor);
+    border-radius: 20px;
+    transition: border 200ms;
+}
+
+/*message box scroll bar hidden*/
+.footer .contact-container .section-divider .Csection2 form #message::-webkit-scrollbar {
+    display: none;
+}
+
+.footer .contact-container .section-divider .Csection2 form #message{
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+  }
+
+  /*submit button style*/
+  .footer .contact-container .section-divider .Csection2 form input[type="submit"]{
+      width: 40%;
+      background-color: transparent;
+      border: 1px solid var(--webcolor);
+      color: var(--webcolor);
+      transition: background-color 500ms, color 500ms;
+  }
+
+  .footer .contact-container .section-divider .Csection2 form input[type="submit"]:hover{
+    background-color: var(--webcolor);
+    border: 1px solid var(--webcolor);
+    color: white;
+}
+
+/*copyright*/
+.footer .contact-container .copyright{
+    width: 100%;
+    margin: 10px auto 0px auto;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,18 @@
+/*navbar*/
+.header .navbar{
+    width: 60%;
+    right: -60%;
+    transition: right 200ms linear;
+   
+}
+
+/*about box*/
+.about-container .section-divider .Asection3 .box{
+    width: 130px;
+    height: 100px;
+}
+
+/*gallery*/
+#slider {
+   height: 52vw;
+}
